@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find -name '*.cfg' | while read i; do
+	sed -i -e 's/$a/$b/i;
+	"$i" > "$i.tmp"
+	mv -f "$i.tmp" "$i"
+done
